@@ -1,0 +1,10 @@
+k=[[9,4],[5,7]]
+p=input().upper().replace(" ","")
+if len(p)%2:p+="X"
+r=""
+for i in range(0,len(p),2):
+ a=ord(p[i])-65
+ b=ord(p[i+1])-65
+ r+=chr((k[0][0]*a+k[0][1]*b)%26+65)
+ r+=chr((k[1][0]*a+k[1][1]*b)%26+65)
+print(r)
