@@ -1,0 +1,3 @@
+k=[f"K{i}" for i in range(1,17)]
+print("Encryption:",k)
+print("Decryption:",k[::-1])
