@@ -1,0 +1,4 @@
+l=list(range(1,29))
+r=list(range(29,57))
+for i in range(16):
+ print("K"+str(i+1),l[:24],r[:24])
