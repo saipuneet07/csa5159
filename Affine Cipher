@@ -1,0 +1,9 @@
+s=input().upper()
+a=int(input())
+b=int(input())
+r=""
+for i in s:
+    if i.isalpha():
+        r+=chr(((a*(ord(i)-65)+b)%26)+65)
+    else:r+=i
+print(r)
