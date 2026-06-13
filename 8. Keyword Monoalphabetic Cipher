@@ -1,0 +1,12 @@
+k=input().upper()
+a="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+c=""
+for i in k+a:
+ if i not in c:c+=i
+p=input().upper()
+r=""
+for i in p:
+ if i.isalpha():
+  r+=c[ord(i)-65]
+ else:r+=i
+print(r)
