@@ -1,0 +1,9 @@
+from Crypto.Cipher import DES3
+from Crypto.Random import get_random_bytes
+k=DES3.adjust_key_parity(get_random_bytes(24))
+iv=get_random_bytes(8)
+c=DES3.new(k,DES3.MODE_CBC,iv)
+p=input().encode()
+while len(p)%8:p+=b' '
+e=c.encrypt(p)
+print(e.hex())
