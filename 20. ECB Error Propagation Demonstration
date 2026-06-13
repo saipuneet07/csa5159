@@ -1,0 +1,6 @@
+p=input()
+b=[p[i:i+8] for i in range(0,len(p),8)]
+e=[x[::-1] for x in b]
+e[0]="ERROR"
+print("Cipher Blocks:",e)
+print("Affected Plaintext Blocks:P1,P2")
