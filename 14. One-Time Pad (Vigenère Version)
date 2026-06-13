@@ -1,0 +1,6 @@
+p=input().upper().replace(" ","")
+k=list(map(int,input().split()))
+r=""
+for i in range(len(p)):
+ r+=chr((ord(p[i])-65+k[i])%26+65)
+print(r)
