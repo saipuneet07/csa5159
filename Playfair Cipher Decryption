@@ -1,0 +1,21 @@
+def g(k):
+ k=k.upper().replace("J","I")
+ s=""
+ for i in k+"ABCDEFGHIKLMNOPQRSTUVWXYZ":
+  if i not in s:s+=i
+ return[s[i:i+5]for i in range(0,25,5)]
+def f(m,x):
+ for i in range(5):
+  for j in range(5):
+   if m[i][j]==x:return i,j
+k=input()
+c=input().upper().replace(" ","")
+m=g(k)
+r=""
+for i in range(0,len(c),2):
+ a,b=c[i],c[i+1]
+ r1,c1=f(m,a);r2,c2=f(m,b)
+ if r1==r2:r+=m[r1][(c1-1)%5]+m[r2][(c2-1)%5]
+ elif c1==c2:r+=m[(r1-1)%5][c1]+m[(r2-1)%5][c2]
+ else:r+=m[r1][c2]+m[r2][c1]
+print(r)
