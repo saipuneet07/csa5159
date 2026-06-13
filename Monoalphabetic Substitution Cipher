@@ -1,0 +1,9 @@
+p="abcdefghijklmnopqrstuvwxyz"
+c=input().lower()
+s=input().lower()
+r=""
+for i in s:
+    if i.isalpha():
+        r+=c[p.index(i)]
+    else:r+=i
+print(r)
