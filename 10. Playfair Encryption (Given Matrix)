@@ -1,0 +1,15 @@
+m=[['M','F','H','I','K'],['U','N','O','P','Q'],['Z','V','W','X','Y'],['E','L','A','R','G'],['D','S','T','B','C']]
+def p(x):
+ for i in range(5):
+  for j in range(5):
+   if m[i][j]==x:return i,j
+t=input().upper().replace("J","I").replace(" ","")
+r=""
+for i in range(0,len(t),2):
+ a=t[i]
+ b=t[i+1] if i+1<len(t) else 'X'
+ r1,c1=p(a);r2,c2=p(b)
+ if r1==r2:r+=m[r1][(c1+1)%5]+m[r2][(c2+1)%5]
+ elif c1==c2:r+=m[(r1+1)%5][c1]+m[(r2+1)%5][c2]
+ else:r+=m[r1][c2]+m[r2][c1]
+print(r)
