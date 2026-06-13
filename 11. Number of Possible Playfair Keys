@@ -1,0 +1,4 @@
+import math
+n=math.factorial(25)
+print(n)
+print(math.log2(n))
