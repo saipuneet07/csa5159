@@ -1,0 +1,10 @@
+p=input().upper()
+k=input().upper()
+r=""
+j=0
+for i in p:
+    if i.isalpha():
+        r+=chr((ord(i)-65+ord(k[j%len(k)])-65)%26+65)
+        j+=1
+    else:r+=i
+print(r)
