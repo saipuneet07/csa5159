@@ -1,0 +1,6 @@
+import numpy as np
+p=np.array([[7,4],[11,11]])
+c=np.array([[3,17],[24,19]])
+pinv=np.linalg.inv(p)
+k=np.dot(c,pinv)
+print(np.round(k))
