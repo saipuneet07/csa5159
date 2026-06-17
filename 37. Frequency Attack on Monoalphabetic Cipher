@@ -1,0 +1,11 @@
+from collections import Counter
+c=input().upper()
+f="ETAOINSHRDLCUMWFGYPBVKJXQZ"
+x=[i[0] for i in Counter(c).most_common()]
+m={}
+for i in range(min(len(x),26)):
+ m[x[i]]=f[i]
+r=""
+for i in c:
+ r+=m.get(i,i)
+print(r)
