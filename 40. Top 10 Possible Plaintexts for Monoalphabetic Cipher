@@ -1,0 +1,12 @@
+from collections import Counter
+c=input().upper()
+f="ETAOINSHRDLCUMWFGYPBVKJXQZ"
+x=[i[0] for i in Counter(c).most_common()]
+for n in range(10):
+ m={}
+ for i in range(min(len(x),26)):
+  m[x[i]]=f[(i+n)%26]
+ r=""
+ for j in c:
+  r+=m.get(j,j)
+ print("Guess",n+1,":",r)
