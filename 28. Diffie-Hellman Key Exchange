@@ -1,0 +1,10 @@
+q=23
+a=5
+xa=6
+xb=15
+ya=pow(a,xa,q)
+yb=pow(a,xb,q)
+ka=pow(yb,xa,q)
+kb=pow(ya,xb,q)
+print("Alice:",ka)
+print("Bob:",kb)
