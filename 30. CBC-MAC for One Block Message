@@ -1,0 +1,9 @@
+def mac(x,k):
+ return x^k
+x=int(input())
+k=int(input())
+t=mac(x,k)
+x2=x^t
+t2=mac(x2,t)
+print("MAC1:",t)
+print("MAC2:",t2)
