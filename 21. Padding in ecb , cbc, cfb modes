@@ -1,0 +1,6 @@
+b=8
+p=input().encode()
+pad=b-(len(p)%b)
+if pad==0:pad=b
+p+=b'\x80'+b'\x00'*(pad-1)
+print(p)
