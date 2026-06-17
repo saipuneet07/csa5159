@@ -1,0 +1,9 @@
+p=23
+q=11
+g=4
+x=3
+k=2
+h=int(input())
+r=pow(g,k,p)%q
+s=(pow(k,-1,q)*(h+x*r))%q
+print(r,s)
