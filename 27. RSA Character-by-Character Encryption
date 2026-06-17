@@ -1,0 +1,8 @@
+e=int(input())
+n=int(input())
+m=input().upper()
+c=[]
+for i in m:
+ if i.isalpha():
+  c.append(pow(ord(i)-65,e,n))
+print(c)
