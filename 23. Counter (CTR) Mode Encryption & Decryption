@@ -1,0 +1,11 @@
+from Crypto.Cipher import DES
+from Crypto.Util import Counter
+k=b'12345678'
+ctr=Counter.new(64,initial_value=0)
+c=DES.new(k,DES.MODE_CTR,counter=ctr)
+p=input().encode()
+e=c.encrypt(p)
+print(e.hex())
+ctr=Counter.new(64,initial_value=0)
+d=DES.new(k,DES.MODE_CTR,counter=ctr)
+print(d.decrypt(e).decode())
