@@ -1,0 +1,8 @@
+from math import gcd
+n=int(input())
+m=int(input())
+g=gcd(n,m)
+if g>1:
+ print("Factor Found:",g,n//g)
+else:
+ print("No Common Factor")
