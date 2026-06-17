@@ -1,0 +1,11 @@
+def ls(x,n):
+ return ((x<<1)&((1<<n)-1))
+n=int(input())
+k=int(input(),16)
+rb=0x1B if n==64 else 0x87
+k1=ls(k,n)
+if k>>(n-1):k1^=rb
+k2=ls(k1,n)
+if k1>>(n-1):k2^=rb
+print(hex(k1))
+print(hex(k2))
