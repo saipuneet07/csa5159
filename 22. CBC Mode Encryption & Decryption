@@ -1,0 +1,10 @@
+from Crypto.Cipher import DES
+k=b'12345678'
+iv=b'ABCDEFGH'
+p=input().encode()
+while len(p)%8:p+=b' '
+c=DES.new(k,DES.MODE_CBC,iv)
+e=c.encrypt(p)
+print(e.hex())
+d=DES.new(k,DES.MODE_CBC,iv)
+print(d.decrypt(e).decode())
